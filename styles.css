@@ -1,0 +1,187 @@
+/* Maison Rivage : site vitrine de démonstration */
+:root {
+  --encre: #14243a;
+  --ecru: #f5f2ea;
+  --blanc: #ffffff;
+  --safran: #d9930d;
+  --brume: #8fa3b8;
+  --ligne: #dcd6c8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Outfit", system-ui, sans-serif;
+  background: var(--ecru);
+  color: var(--encre);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .display {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+a { color: inherit; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* En-tête */
+header {
+  background: var(--ecru);
+  border-bottom: 1px solid var(--ligne);
+  position: sticky; top: 0; z-index: 50;
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 24px; max-width: 1100px; margin: 0 auto;
+}
+.logo {
+  font-family: "Fraunces", serif; font-size: 1.35rem; letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.logo span { color: var(--safran); }
+.nav ul { display: flex; gap: 28px; list-style: none; }
+.nav a { text-decoration: none; font-size: 0.95rem; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--safran); }
+
+/* Héro */
+.hero {
+  background: var(--encre); color: var(--ecru);
+  padding: 96px 0 88px;
+}
+.hero-image {
+  background:
+    linear-gradient(100deg, rgba(20, 36, 58, 0.92) 30%, rgba(20, 36, 58, 0.55)),
+    url("https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=70")
+    center 40% / cover no-repeat var(--encre);
+  padding: 130px 0 120px;
+}
+.hero .eyebrow {
+  text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.78rem;
+  color: var(--brume); margin-bottom: 18px;
+}
+.hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 16ch; }
+.hero p { max-width: 52ch; margin-top: 20px; color: #cdd6e0; }
+.hero .cta {
+  display: inline-block; margin-top: 32px; padding: 13px 28px;
+  background: var(--safran); color: var(--encre); text-decoration: none;
+  border-radius: 2px; font-weight: 600;
+}
+
+/* Sections */
+section { padding: 72px 0; }
+.section-title { font-size: 1.9rem; margin-bottom: 8px; }
+.section-sub { color: #5b6b7d; margin-bottom: 40px; }
+
+/* Grille produits */
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 28px;
+}
+.card {
+  background: var(--blanc); border: 1px solid var(--ligne);
+  border-radius: 3px; overflow: hidden;
+}
+.card .visuel {
+  aspect-ratio: 4 / 3; overflow: hidden;
+}
+.card .visuel img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.4s ease;
+}
+.card:hover .visuel img { transform: scale(1.04); }
+.v1 { background: linear-gradient(135deg, #14243a, #2b4a6f); }
+.v2 { background: linear-gradient(135deg, #7d5a2a, #d9930d); }
+.v3 { background: linear-gradient(135deg, #3f5c50, #7fa08f); }
+.v4 { background: linear-gradient(135deg, #6b4a52, #a97b86); }
+.card .infos { padding: 18px 20px 22px; }
+.card h3 { font-size: 1.1rem; }
+.card .prix { color: var(--safran); font-weight: 600; margin-top: 6px; }
+
+/* Atelier */
+.atelier { background: var(--blanc); border-top: 1px solid var(--ligne); }
+.atelier-grid {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center;
+}
+.atelier-visuel img {
+  width: 100%; aspect-ratio: 5 / 4; object-fit: cover; display: block;
+  border-radius: 3px; background: var(--encre);
+}
+.atelier-texte p { margin-top: 14px; color: #4a5a6b; }
+@media (max-width: 760px) { .atelier-grid { grid-template-columns: 1fr; } }
+
+/* Bandeau engagement */
+.engagement { background: var(--blanc); border-top: 1px solid var(--ligne); border-bottom: 1px solid var(--ligne); }
+.engagement .wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; }
+
+/* Page confidentialité */
+.privacy-hero { background: var(--encre); color: var(--ecru); padding: 64px 0; }
+.privacy-hero h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+.privacy-hero p { color: #cdd6e0; max-width: 60ch; margin-top: 14px; }
+
+.droits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 32px; }
+.droit {
+  background: var(--blanc); border: 1px solid var(--ligne); border-radius: 3px;
+  padding: 20px 22px;
+}
+.droit h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.droit p { font-size: 0.92rem; color: #4a5a6b; }
+
+.encart-form {
+  background: var(--blanc); border: 1px solid var(--ligne); border-radius: 3px;
+  padding: 28px; margin-top: 40px;
+}
+.encart-form iframe { width: 100%; min-height: 720px; border: 0; }
+
+.note-cookies {
+  background: var(--blanc); border-left: 4px solid var(--safran);
+  padding: 22px 26px; margin-top: 40px; border-radius: 0 3px 3px 0;
+}
+.btn-secondaire {
+  display: inline-block; margin-top: 14px; padding: 10px 22px;
+  border: 1.5px solid var(--encre); border-radius: 2px;
+  text-decoration: none; font-weight: 600; font-size: 0.92rem;
+  background: none; cursor: pointer; font-family: inherit; color: var(--encre);
+}
+.btn-secondaire:hover { background: var(--encre); color: var(--ecru); }
+
+/* Pied de page */
+footer {
+  background: var(--encre); color: var(--brume);
+  padding: 48px 0; font-size: 0.9rem;
+}
+footer .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+footer a { color: var(--ecru); text-decoration: none; }
+footer a:hover { color: var(--safran); }
+footer ul { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .nav ul { gap: 16px; }
+  .hero { padding: 64px 0 56px; }
+  section { padding: 48px 0; }
+}
+
+/* Lettre d'information et consentement */
+.newsletter { background: var(--encre); color: var(--ecru); }
+.newsletter .section-title { color: var(--ecru); }
+.newsletter .section-sub { color: #cdd6e0; }
+.newsletter-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+@media (max-width: 760px) { .newsletter-grid { grid-template-columns: 1fr; } }
+
+.form-consent .champ { margin-bottom: 16px; }
+.form-consent label { display: block; font-size: 0.92rem; margin-bottom: 5px; }
+.form-consent input[type="text"], .form-consent input[type="email"] {
+  width: 100%; padding: 11px 13px; border: 1px solid var(--brume);
+  border-radius: 2px; background: var(--blanc); color: var(--encre);
+  font-family: inherit; font-size: 0.95rem;
+}
+.consentements { border: 1px solid rgba(143, 163, 184, 0.4); border-radius: 2px; padding: 16px 18px; margin: 18px 0 14px; }
+.consentements legend { padding: 0 8px; font-size: 0.92rem; }
+.case { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; margin: 9px 0; cursor: pointer; }
+.case input { margin-top: 3px; }
+.mention { font-size: 0.8rem; color: var(--brume); line-height: 1.5; }
+.mention a { color: var(--ecru); }
+.cta-form { border: 0; cursor: pointer; font-family: inherit; font-size: 0.98rem; margin-top: 16px; }
+.confirmation { margin-top: 14px; color: #8fd19e; font-weight: 600; }

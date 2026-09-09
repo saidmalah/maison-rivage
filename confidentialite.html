@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confidentialité et données personnelles : Maison Rivage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ============================================================
+       SECURITI COOKIE CONSENT SDK
+       Coller ici les mêmes snippets CSS + JavaScript que sur
+       index.html (le SDK doit être présent sur toutes les pages).
+       ============================================================ -->
+
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a class="logo" href="index.html">Maison <span>Rivage</span></a>
+      <ul>
+        <li><a href="index.html#collections">Collections</a></li>
+        <li><a href="index.html#atelier">L'atelier</a></li>
+        <li><a href="confidentialite.html" aria-current="page">Confidentialité</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="privacy-hero">
+    <div class="wrap">
+      <h1>Vos données personnelles, vos droits</h1>
+      <p>Maison Rivage traite vos données dans le respect du Règlement général sur la protection des données. Cette page vous permet de comprendre vos droits et de les exercer directement en ligne.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Vos droits en tant que personne concernée</h2>
+      <p class="section-sub">Le RGPD vous garantit notamment les droits suivants. Chacun peut être exercé via le formulaire ci-dessous.</p>
+      <div class="droits">
+        <div class="droit">
+          <h3>Droit d'accès</h3>
+          <p>Obtenir une copie des données personnelles que nous détenons à votre sujet.</p>
+        </div>
+        <div class="droit">
+          <h3>Droit de rectification</h3>
+          <p>Faire corriger des données inexactes ou incomplètes.</p>
+        </div>
+        <div class="droit">
+          <h3>Droit à l'effacement</h3>
+          <p>Demander la suppression de vos données dans les conditions prévues par la réglementation.</p>
+        </div>
+        <div class="droit">
+          <h3>Droit d'opposition et de limitation</h3>
+          <p>Vous opposer à certains traitements ou en demander la limitation.</p>
+        </div>
+        <div class="droit">
+          <h3>Droit à la portabilité</h3>
+          <p>Recevoir vos données dans un format structuré et lisible par machine.</p>
+        </div>
+        <div class="droit">
+          <h3>Retrait du consentement</h3>
+          <p>Retirer à tout moment un consentement donné, sans affecter les traitements passés.</p>
+        </div>
+      </div>
+
+      <div class="encart-form" id="dsr">
+        <h2 class="section-title">Exercer mes droits</h2>
+        <p class="section-sub">Remplissez le formulaire ci-dessous. Vous recevrez un email de vérification, puis un numéro de suivi de votre demande.</p>
+
+        <!-- ============================================================
+             FORMULAIRE DSR SECURITI (formulaire externe)
+             1. Créer et publier le formulaire dans le module DSR.
+             2. Ajouter le domaine du site dans "Embeddable Domains"
+                du formulaire (sinon Securiti refuse de servir l'iframe).
+             3. Remplacer l'URL src ci-dessous par l'URL publiée du formulaire.
+             ============================================================ -->
+        <iframe
+          src="URL_DU_FORMULAIRE_DSR_SECURITI"
+          title="Formulaire de demande relative aux données personnelles">
+        </iframe>
+      </div>
+
+
+      <div class="encart-form" id="notice">
+        <h2 class="section-title">Politique de confidentialité détaillée</h2>
+        <p class="section-sub">Notre notice d'information complète décrit les traitements, finalités, bases légales, durées de conservation et destinataires de vos données.</p>
+
+        <!-- ============================================================
+             PRIVACY NOTICE SECURITI
+             Créer et publier la notice dans le module Privacy Notice
+             (modèle ou import), puis remplacer le href ci-dessous par
+             l'URL de la notice publiée. La notice reste versionnée et
+             mise à jour côté Securiti sans retoucher le site.
+             ============================================================ -->
+        <a class="btn-secondaire" href="URL_DE_LA_PRIVACY_NOTICE_SECURITI" target="_blank" rel="noopener">Consulter la politique de confidentialité</a>
+      </div>
+
+      <div class="encart-form" id="preferences">
+        <h2 class="section-title">Préférences de communication</h2>
+        <p class="section-sub">Choisissez ce que vous recevez de notre part : lettre de la maison, offres partenaires, SMS. Saisissez votre email, recevez un lien sécurisé à usage unique, puis ajustez vos préférences. Elles s'appliquent immédiatement à tous nos canaux.</p>
+
+        <!-- ============================================================
+             UNIVERSAL PREFERENCE CENTER SECURITI
+             Créer le Preference Center dans Universal Consent (modèle,
+             branding, purposes), le publier, puis remplacer le href
+             ci-dessous par l'URL publiée. Le visiteur s'identifie par
+             email et reçoit un lien magique vers sa page personnalisée.
+             ============================================================ -->
+        <a class="btn-secondaire" href="URL_DU_PREFERENCE_CENTER_SECURITI" target="_blank" rel="noopener">Gérer mes préférences</a>
+      </div>
+
+      <div class="note-cookies">
+        <h3>Cookies et traceurs</h3>
+        <p>Lors de votre première visite, un bandeau vous permet d'accepter ou de refuser les cookies non essentiels. Vous pouvez modifier vos choix à tout moment.</p>
+        <button class="btn-secondaire" id="ouvrir-preferences-cookies">Gérer mes préférences cookies</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 Maison Rivage. Site fictif de démonstration.</p>
+      <ul>
+        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+        <li><a href="#dsr">Exercer mes droits</a></li>
+        <li><a href="#preferences">Préférences de communication</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ouvrir-preferences-cookies').addEventListener('click', function (e) {
+      e.preventDefault();
+      /* Appel du centre de préférences Securiti à insérer ici */
+    });
+  </script>
+
+</body>
+</html>
